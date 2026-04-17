@@ -1,0 +1,40 @@
+14536 src/agents
+5576 src/gateway
+5458 src/commands
+5042 src/auto-reply
+4910 src/infra
+4750 src/plugins
+4687 CHANGELOG.md
+3832 src/config
+3690 ui/src
+3404 src/plugin-sdk
+3246 src/cli
+2310 extensions/discord
+2261 src/channels
+2251 extensions/telegram
+2211 extensions/matrix
+1761 extensions/feishu
+1723 src/cron
+1618 docs/zh-CN
+1571 src/browser
+1458 src/telegram
+1353 src/discord
+1341 extensions/slack
+1252 extensions/msteams
+1239 docs/pt-BR
+1239 docs/es
+1187 extensions/whatsapp
+1004 apps/macos
+1002 src/slack
+ 989 apps/android
+ 940 extensions/bluebubbles
+ 913 src/memory
+ 880 docs/gateway
+ 878 extensions/mattermost
+ 876 apps/ios
+ 866 extensions/memory-core
+ 826 src/secrets
+ 820 extensions/browser
+ 776 docs/tools
+ 754 extensions/voice-call
+ 738 extensions/qa-lab

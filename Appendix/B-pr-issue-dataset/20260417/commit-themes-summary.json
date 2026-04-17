@@ -1,0 +1,702 @@
+{
+  "total_commits": 23014,
+  "theme_counts": [
+    [
+      "ci-build-infra",
+      8063
+    ],
+    [
+      "channels-messaging",
+      4796
+    ],
+    [
+      "uncategorized",
+      3918
+    ],
+    [
+      "security-sandbox",
+      2763
+    ],
+    [
+      "models-providers",
+      2311
+    ],
+    [
+      "docs-i18n",
+      1925
+    ],
+    [
+      "agent-session",
+      1649
+    ],
+    [
+      "onboarding-setup",
+      1586
+    ],
+    [
+      "memory-context",
+      1257
+    ],
+    [
+      "canvas-ui-web",
+      1063
+    ],
+    [
+      "browser-tools",
+      985
+    ],
+    [
+      "image-video-media",
+      718
+    ],
+    [
+      "cron-schedule",
+      596
+    ],
+    [
+      "apps-mobile",
+      590
+    ],
+    [
+      "voice-audio",
+      471
+    ],
+    [
+      "skills-hub",
+      346
+    ],
+    [
+      "webhooks-integrations",
+      228
+    ]
+  ],
+  "type_counts": [
+    [
+      "fix",
+      7854
+    ],
+    [
+      "test",
+      4123
+    ],
+    [
+      "refactor",
+      3525
+    ],
+    [
+      "other",
+      2816
+    ],
+    [
+      "docs",
+      1695
+    ],
+    [
+      "perf",
+      869
+    ],
+    [
+      "chore",
+      735
+    ],
+    [
+      "feat",
+      665
+    ],
+    [
+      "ci",
+      262
+    ],
+    [
+      "build",
+      188
+    ],
+    [
+      "style",
+      182
+    ],
+    [
+      "revert",
+      94
+    ],
+    [
+      "feature",
+      6
+    ]
+  ],
+  "theme_by_month": {
+    "2026-01": {
+      "memory-context": 7,
+      "uncategorized": 6,
+      "channels-messaging": 6,
+      "ci-build-infra": 5,
+      "models-providers": 5,
+      "apps-mobile": 5,
+      "browser-tools": 4,
+      "agent-session": 4,
+      "docs-i18n": 3,
+      "security-sandbox": 1,
+      "canvas-ui-web": 1,
+      "cron-schedule": 1,
+      "voice-audio": 1
+    },
+    "2026-02": {
+      "ci-build-infra": 2576,
+      "channels-messaging": 1280,
+      "uncategorized": 1106,
+      "security-sandbox": 1098,
+      "agent-session": 582,
+      "onboarding-setup": 557,
+      "docs-i18n": 554,
+      "models-providers": 445,
+      "canvas-ui-web": 356,
+      "memory-context": 348,
+      "browser-tools": 293,
+      "apps-mobile": 267,
+      "cron-schedule": 239,
+      "image-video-media": 236,
+      "voice-audio": 168,
+      "skills-hub": 146,
+      "webhooks-integrations": 101
+    },
+    "2026-03": {
+      "ci-build-infra": 2880,
+      "channels-messaging": 2105,
+      "uncategorized": 1483,
+      "security-sandbox": 1009,
+      "models-providers": 890,
+      "docs-i18n": 675,
+      "agent-session": 621,
+      "onboarding-setup": 607,
+      "memory-context": 446,
+      "browser-tools": 397,
+      "canvas-ui-web": 315,
+      "image-video-media": 237,
+      "apps-mobile": 222,
+      "cron-schedule": 190,
+      "voice-audio": 178,
+      "skills-hub": 145,
+      "webhooks-integrations": 91
+    },
+    "2026-04": {
+      "ci-build-infra": 2602,
+      "channels-messaging": 1405,
+      "uncategorized": 1323,
+      "models-providers": 970,
+      "docs-i18n": 693,
+      "security-sandbox": 655,
+      "memory-context": 456,
+      "agent-session": 442,
+      "onboarding-setup": 422,
+      "canvas-ui-web": 391,
+      "browser-tools": 291,
+      "image-video-media": 245,
+      "cron-schedule": 166,
+      "voice-audio": 124,
+      "apps-mobile": 96,
+      "skills-hub": 55,
+      "webhooks-integrations": 36
+    },
+    "acc": {
+      "models-providers": 1
+    }
+  },
+  "type_by_theme": {
+    "security-sandbox": {
+      "fix": 1216,
+      "test": 401,
+      "other": 392,
+      "refactor": 384,
+      "docs": 211
+    },
+    "channels-messaging": {
+      "fix": 1794,
+      "test": 850,
+      "refactor": 849,
+      "other": 733,
+      "docs": 200
+    },
+    "canvas-ui-web": {
+      "fix": 317,
+      "other": 178,
+      "test": 124,
+      "chore": 115,
+      "refactor": 101
+    },
+    "docs-i18n": {
+      "docs": 1695,
+      "fix": 106,
+      "other": 53,
+      "chore": 22,
+      "feat": 11
+    },
+    "uncategorized": {
+      "fix": 1802,
+      "refactor": 956,
+      "other": 649,
+      "chore": 233,
+      "perf": 127
+    },
+    "ci-build-infra": {
+      "test": 4123,
+      "fix": 1228,
+      "refactor": 699,
+      "other": 524,
+      "perf": 478
+    },
+    "models-providers": {
+      "fix": 829,
+      "refactor": 384,
+      "test": 356,
+      "other": 291,
+      "docs": 217
+    },
+    "memory-context": {
+      "fix": 471,
+      "other": 200,
+      "test": 171,
+      "refactor": 141,
+      "feat": 96
+    },
+    "voice-audio": {
+      "fix": 213,
+      "refactor": 69,
+      "test": 67,
+      "other": 53,
+      "feat": 28
+    },
+    "agent-session": {
+      "fix": 702,
+      "test": 293,
+      "refactor": 217,
+      "other": 210,
+      "perf": 75
+    },
+    "image-video-media": {
+      "fix": 272,
+      "test": 140,
+      "refactor": 107,
+      "other": 72,
+      "docs": 47
+    },
+    "onboarding-setup": {
+      "fix": 420,
+      "test": 387,
+      "refactor": 381,
+      "other": 152,
+      "docs": 118
+    },
+    "cron-schedule": {
+      "fix": 239,
+      "test": 108,
+      "other": 83,
+      "refactor": 83,
+      "perf": 37
+    },
+    "apps-mobile": {
+      "fix": 243,
+      "other": 90,
+      "feat": 67,
+      "test": 61,
+      "refactor": 47
+    },
+    "browser-tools": {
+      "fix": 358,
+      "test": 184,
+      "refactor": 156,
+      "other": 89,
+      "docs": 72
+    },
+    "webhooks-integrations": {
+      "fix": 86,
+      "refactor": 45,
+      "test": 40,
+      "other": 30,
+      "feat": 12
+    },
+    "skills-hub": {
+      "fix": 124,
+      "other": 52,
+      "refactor": 43,
+      "test": 42,
+      "docs": 30
+    }
+  },
+  "top_authors_per_theme": {
+    "security-sandbox": [
+      [
+        "Peter Steinberger",
+        1580
+      ],
+      [
+        "Vincent Koc",
+        289
+      ],
+      [
+        "Vignesh Natarajan",
+        78
+      ],
+      [
+        "Ayaan Zaidi",
+        63
+      ],
+      [
+        "Tak Hoffman",
+        48
+      ]
+    ],
+    "channels-messaging": [
+      [
+        "Peter Steinberger",
+        2000
+      ],
+      [
+        "Vincent Koc",
+        827
+      ],
+      [
+        "Gustavo Madeira Santana",
+        252
+      ],
+      [
+        "Tak Hoffman",
+        240
+      ],
+      [
+        "Ayaan Zaidi",
+        201
+      ]
+    ],
+    "canvas-ui-web": [
+      [
+        "Peter Steinberger",
+        379
+      ],
+      [
+        "Vincent Koc",
+        138
+      ],
+      [
+        "github-actions[bot]",
+        93
+      ],
+      [
+        "Val Alexander",
+        57
+      ],
+      [
+        "joshavant",
+        44
+      ]
+    ],
+    "docs-i18n": [
+      [
+        "Peter Steinberger",
+        950
+      ],
+      [
+        "Vincent Koc",
+        390
+      ],
+      [
+        "Ayaan Zaidi",
+        46
+      ],
+      [
+        "Gustavo Madeira Santana",
+        45
+      ],
+      [
+        "Tak Hoffman",
+        33
+      ]
+    ],
+    "uncategorized": [
+      [
+        "Peter Steinberger",
+        1707
+      ],
+      [
+        "Vincent Koc",
+        611
+      ],
+      [
+        "Tak Hoffman",
+        176
+      ],
+      [
+        "Gustavo Madeira Santana",
+        131
+      ],
+      [
+        "Ayaan Zaidi",
+        104
+      ]
+    ],
+    "ci-build-infra": [
+      [
+        "Peter Steinberger",
+        5473
+      ],
+      [
+        "Vincent Koc",
+        1201
+      ],
+      [
+        "Ayaan Zaidi",
+        167
+      ],
+      [
+        "Shakker",
+        150
+      ],
+      [
+        "Gustavo Madeira Santana",
+        149
+      ]
+    ],
+    "models-providers": [
+      [
+        "Peter Steinberger",
+        1109
+      ],
+      [
+        "Vincent Koc",
+        428
+      ],
+      [
+        "Tak Hoffman",
+        58
+      ],
+      [
+        "Ayaan Zaidi",
+        38
+      ],
+      [
+        "Gustavo Madeira Santana",
+        36
+      ]
+    ],
+    "memory-context": [
+      [
+        "Peter Steinberger",
+        416
+      ],
+      [
+        "Vincent Koc",
+        236
+      ],
+      [
+        "Vignesh Natarajan",
+        106
+      ],
+      [
+        "Tak Hoffman",
+        62
+      ],
+      [
+        "Gustavo Madeira Santana",
+        22
+      ]
+    ],
+    "voice-audio": [
+      [
+        "Peter Steinberger",
+        171
+      ],
+      [
+        "Vincent Koc",
+        62
+      ],
+      [
+        "Ayaan Zaidi",
+        33
+      ],
+      [
+        "Tak Hoffman",
+        16
+      ],
+      [
+        "Sebastian",
+        9
+      ]
+    ],
+    "agent-session": [
+      [
+        "Peter Steinberger",
+        693
+      ],
+      [
+        "Vincent Koc",
+        144
+      ],
+      [
+        "Tak Hoffman",
+        121
+      ],
+      [
+        "Gustavo Madeira Santana",
+        55
+      ],
+      [
+        "Vignesh Natarajan",
+        42
+      ]
+    ],
+    "image-video-media": [
+      [
+        "Peter Steinberger",
+        368
+      ],
+      [
+        "Vincent Koc",
+        99
+      ],
+      [
+        "Ayaan Zaidi",
+        27
+      ],
+      [
+        "Shakker",
+        18
+      ],
+      [
+        "Gustavo Madeira Santana",
+        13
+      ]
+    ],
+    "onboarding-setup": [
+      [
+        "Peter Steinberger",
+        953
+      ],
+      [
+        "Vincent Koc",
+        242
+      ],
+      [
+        "Tak Hoffman",
+        68
+      ],
+      [
+        "Ayaan Zaidi",
+        47
+      ],
+      [
+        "Gustavo Madeira Santana",
+        38
+      ]
+    ],
+    "cron-schedule": [
+      [
+        "Peter Steinberger",
+        257
+      ],
+      [
+        "Vincent Koc",
+        51
+      ],
+      [
+        "Shakker",
+        25
+      ],
+      [
+        "Tak Hoffman",
+        21
+      ],
+      [
+        "Tyler Yust",
+        21
+      ]
+    ],
+    "apps-mobile": [
+      [
+        "Ayaan Zaidi",
+        237
+      ],
+      [
+        "Peter Steinberger",
+        132
+      ],
+      [
+        "Mariano",
+        40
+      ],
+      [
+        "Nimrod Gutman",
+        35
+      ],
+      [
+        "Mariano Belinky",
+        16
+      ]
+    ],
+    "browser-tools": [
+      [
+        "Peter Steinberger",
+        481
+      ],
+      [
+        "Vincent Koc",
+        153
+      ],
+      [
+        "Shakker",
+        29
+      ],
+      [
+        "Tak Hoffman",
+        23
+      ],
+      [
+        "Vignesh Natarajan",
+        21
+      ]
+    ],
+    "webhooks-integrations": [
+      [
+        "Peter Steinberger",
+        111
+      ],
+      [
+        "Vincent Koc",
+        25
+      ],
+      [
+        "Ayaan Zaidi",
+        20
+      ],
+      [
+        "Jacob Tomlinson",
+        7
+      ],
+      [
+        "Vignesh Natarajan",
+        7
+      ]
+    ],
+    "skills-hub": [
+      [
+        "Peter Steinberger",
+        162
+      ],
+      [
+        "Vincent Koc",
+        45
+      ],
+      [
+        "Gustavo Madeira Santana",
+        19
+      ],
+      [
+        "Tak Hoffman",
+        11
+      ],
+      [
+        "joshavant",
+        7
+      ]
+    ]
+  },
+  "pr_count": 3435
+}

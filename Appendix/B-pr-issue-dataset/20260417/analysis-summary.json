@@ -1,0 +1,650 @@
+{
+  "collected_at": "2026-04-17T19:24:21.861528",
+  "totals": {
+    "prs_merged_since_2026_02_01": 1200,
+    "issues_since_2026_01_01": 420,
+    "forks_sampled": 300
+  },
+  "pr_theme_top": [
+    [
+      "channels-messaging",
+      250
+    ],
+    [
+      "uncategorized",
+      227
+    ],
+    [
+      "models-providers",
+      172
+    ],
+    [
+      "memory-context",
+      145
+    ],
+    [
+      "security-sandbox",
+      139
+    ],
+    [
+      "agent-session",
+      128
+    ],
+    [
+      "ci-build-infra",
+      102
+    ],
+    [
+      "docs-i18n",
+      91
+    ],
+    [
+      "browser-tools",
+      57
+    ],
+    [
+      "canvas-ui-web",
+      55
+    ],
+    [
+      "image-video-media",
+      52
+    ],
+    [
+      "onboarding-setup",
+      48
+    ],
+    [
+      "cron-schedule",
+      46
+    ],
+    [
+      "voice-audio",
+      43
+    ],
+    [
+      "apps-mobile",
+      27
+    ],
+    [
+      "skills-hub",
+      26
+    ],
+    [
+      "webhooks-integrations",
+      7
+    ]
+  ],
+  "pr_by_month_theme": {
+    "2026-02": {
+      "canvas-ui-web": 19,
+      "uncategorized": 71,
+      "ci-build-infra": 36,
+      "models-providers": 39,
+      "agent-session": 43,
+      "channels-messaging": 89,
+      "memory-context": 36,
+      "browser-tools": 18,
+      "docs-i18n": 68,
+      "skills-hub": 14,
+      "onboarding-setup": 19,
+      "security-sandbox": 41,
+      "apps-mobile": 7,
+      "image-video-media": 11,
+      "voice-audio": 8,
+      "cron-schedule": 12
+    },
+    "2026-03": {
+      "voice-audio": 4,
+      "models-providers": 4,
+      "channels-messaging": 3,
+      "image-video-media": 4,
+      "memory-context": 5,
+      "apps-mobile": 1,
+      "agent-session": 9,
+      "uncategorized": 4,
+      "security-sandbox": 2,
+      "canvas-ui-web": 2,
+      "cron-schedule": 2,
+      "ci-build-infra": 2
+    },
+    "2026-04": {
+      "uncategorized": 152,
+      "apps-mobile": 19,
+      "security-sandbox": 96,
+      "canvas-ui-web": 34,
+      "models-providers": 129,
+      "channels-messaging": 158,
+      "agent-session": 76,
+      "memory-context": 104,
+      "onboarding-setup": 29,
+      "docs-i18n": 23,
+      "ci-build-infra": 64,
+      "skills-hub": 12,
+      "image-video-media": 37,
+      "cron-schedule": 32,
+      "voice-audio": 31,
+      "browser-tools": 39,
+      "webhooks-integrations": 7
+    }
+  },
+  "pr_top_authors": [
+    [
+      "vincentkoc",
+      61
+    ],
+    [
+      "mbelinky",
+      43
+    ],
+    [
+      "gumadeiras",
+      39
+    ],
+    [
+      "eleqtrizit",
+      33
+    ],
+    [
+      "obviyus",
+      30
+    ],
+    [
+      "Takhoffman",
+      29
+    ],
+    [
+      "hxy91819",
+      28
+    ],
+    [
+      "pgondhi987",
+      24
+    ],
+    [
+      "mcaxtr",
+      23
+    ],
+    [
+      "neeravmakwana",
+      23
+    ],
+    [
+      "sebslight",
+      20
+    ],
+    [
+      "ngutman",
+      20
+    ],
+    [
+      "sudie-codes",
+      19
+    ],
+    [
+      "quotentiroler",
+      17
+    ],
+    [
+      "jalehman",
+      17
+    ],
+    [
+      "openperf",
+      17
+    ],
+    [
+      "tyler6204",
+      15
+    ],
+    [
+      "100yenadmin",
+      15
+    ],
+    [
+      "vignesh07",
+      14
+    ],
+    [
+      "steipete",
+      13
+    ],
+    [
+      "joshp123",
+      10
+    ],
+    [
+      "drobison00",
+      10
+    ],
+    [
+      "omarshahine",
+      10
+    ],
+    [
+      "pashpashpash",
+      10
+    ],
+    [
+      "altaywtf",
+      10
+    ],
+    [
+      "Glucksberg",
+      9
+    ],
+    [
+      "christianklotz",
+      9
+    ],
+    [
+      "BunsDev",
+      9
+    ],
+    [
+      "onutc",
+      9
+    ],
+    [
+      "joshavant",
+      8
+    ]
+  ],
+  "pr_labels_top": [
+    [
+      "maintainer",
+      457
+    ],
+    [
+      "agents",
+      345
+    ],
+    [
+      "size: S",
+      302
+    ],
+    [
+      "docs",
+      241
+    ],
+    [
+      "size: M",
+      219
+    ],
+    [
+      "size: XS",
+      199
+    ],
+    [
+      "gateway",
+      179
+    ],
+    [
+      "size: L",
+      98
+    ],
+    [
+      "size: XL",
+      90
+    ],
+    [
+      "app: web-ui",
+      80
+    ],
+    [
+      "channel: telegram",
+      78
+    ],
+    [
+      "commands",
+      77
+    ],
+    [
+      "scripts",
+      69
+    ],
+    [
+      "cli",
+      68
+    ],
+    [
+      "channel: discord",
+      54
+    ],
+    [
+      "extensions: memory-core",
+      44
+    ],
+    [
+      "channel: msteams",
+      41
+    ],
+    [
+      "channel: matrix",
+      38
+    ],
+    [
+      "channel: whatsapp-web",
+      36
+    ],
+    [
+      "channel: slack",
+      35
+    ],
+    [
+      "docker",
+      31
+    ],
+    [
+      "app: macos",
+      27
+    ],
+    [
+      "channel: feishu",
+      23
+    ],
+    [
+      "extensions: qa-lab",
+      23
+    ],
+    [
+      "channel: bluebubbles",
+      20
+    ],
+    [
+      "channel: imessage",
+      17
+    ],
+    [
+      "extensions: openai",
+      16
+    ],
+    [
+      "channel: mattermost",
+      13
+    ],
+    [
+      "channel: qqbot",
+      13
+    ],
+    [
+      "channel: voice-call",
+      12
+    ]
+  ],
+  "issue_theme_top": [
+    [
+      "agent-session",
+      176
+    ],
+    [
+      "channels-messaging",
+      149
+    ],
+    [
+      "models-providers",
+      140
+    ],
+    [
+      "ci-build-infra",
+      126
+    ],
+    [
+      "memory-context",
+      85
+    ],
+    [
+      "onboarding-setup",
+      71
+    ],
+    [
+      "canvas-ui-web",
+      68
+    ],
+    [
+      "browser-tools",
+      65
+    ],
+    [
+      "apps-mobile",
+      59
+    ],
+    [
+      "security-sandbox",
+      49
+    ],
+    [
+      "image-video-media",
+      38
+    ],
+    [
+      "cron-schedule",
+      30
+    ],
+    [
+      "skills-hub",
+      16
+    ],
+    [
+      "voice-audio",
+      15
+    ],
+    [
+      "webhooks-integrations",
+      12
+    ],
+    [
+      "uncategorized",
+      9
+    ],
+    [
+      "docs-i18n",
+      4
+    ]
+  ],
+  "issue_by_month_theme": {
+    "2026-02": {
+      "security-sandbox": 2,
+      "models-providers": 2,
+      "voice-audio": 1,
+      "image-video-media": 1,
+      "ci-build-infra": 1,
+      "skills-hub": 1,
+      "onboarding-setup": 1
+    },
+    "2026-03": {
+      "models-providers": 50,
+      "apps-mobile": 26,
+      "ci-build-infra": 20,
+      "canvas-ui-web": 26,
+      "browser-tools": 24,
+      "agent-session": 74,
+      "cron-schedule": 10,
+      "memory-context": 25,
+      "channels-messaging": 76,
+      "image-video-media": 15,
+      "security-sandbox": 20,
+      "skills-hub": 9,
+      "onboarding-setup": 32,
+      "voice-audio": 6,
+      "docs-i18n": 2,
+      "webhooks-integrations": 4
+    },
+    "2026-04": {
+      "agent-session": 102,
+      "cron-schedule": 20,
+      "uncategorized": 9,
+      "memory-context": 60,
+      "onboarding-setup": 38,
+      "canvas-ui-web": 42,
+      "security-sandbox": 27,
+      "apps-mobile": 33,
+      "models-providers": 88,
+      "ci-build-infra": 105,
+      "channels-messaging": 73,
+      "browser-tools": 41,
+      "image-video-media": 22,
+      "webhooks-integrations": 8,
+      "voice-audio": 8,
+      "skills-hub": 6,
+      "docs-i18n": 2
+    }
+  },
+  "issue_labels_top": [
+    [
+      "stale",
+      150
+    ],
+    [
+      "bug",
+      125
+    ],
+    [
+      "regression",
+      56
+    ],
+    [
+      "bug:behavior",
+      43
+    ],
+    [
+      "enhancement",
+      11
+    ],
+    [
+      "bug:crash",
+      8
+    ],
+    [
+      "maintainer",
+      2
+    ]
+  ],
+  "issue_states": {
+    "open": 278,
+    "closed": 142
+  },
+  "fork_most_recent_30d": 300,
+  "fork_recent_with_star_top10": [
+    {
+      "full_name": "alanestevanmendes-afk/openclaw",
+      "html_url": "https://github.com/alanestevanmendes-afk/openclaw",
+      "pushed_at": "2026-04-17T03:07:09Z",
+      "stars": 1,
+      "language": null,
+      "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 "
+    },
+    {
+      "full_name": "Larryzpl123/openclaw",
+      "html_url": "https://github.com/Larryzpl123/openclaw",
+      "pushed_at": "2026-04-17T01:30:24Z",
+      "stars": 1,
+      "language": null,
+      "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 "
+    },
+    {
+      "full_name": "Luuuk12321/openclaw-my",
+      "html_url": "https://github.com/Luuuk12321/openclaw-my",
+      "pushed_at": "2026-04-17T11:21:13Z",
+      "stars": 0,
+      "language": null,
+      "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 "
+    },
+    {
+      "full_name": "wade-microblueworld/openclaw",
+      "html_url": "https://github.com/wade-microblueworld/openclaw",
+      "pushed_at": "2026-04-17T11:20:13Z",
+      "stars": 0,
+      "language": null,
+      "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 "
+    },
+    {
+      "full_name": "allenliang2022/openclaw",
+      "html_url": "https://github.com/allenliang2022/openclaw",
+      "pushed_at": "2026-04-17T11:17:34Z",
+      "stars": 0,
+      "language": null,
+      "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 "
+    },
+    {
+      "full_name": "XuSenfeng/openclaw",
+      "html_url": "https://github.com/XuSenfeng/openclaw",
+      "pushed_at": "2026-04-17T11:10:38Z",
+      "stars": 0,
+      "language": null,
+      "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 "
+    },
+    {
+      "full_name": "Zetarcos/openclaw",
+      "html_url": "https://github.com/Zetarcos/openclaw",
+      "pushed_at": "2026-04-17T11:00:50Z",
+      "stars": 0,
+      "language": null,
+      "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 "
+    },
+    {
+      "full_name": "channb1026/openclaw",
+      "html_url": "https://github.com/channb1026/openclaw",
+      "pushed_at": "2026-04-17T10:56:09Z",
+      "stars": 0,
+      "language": null,
+      "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 "
+    },
+    {
+      "full_name": "anatoliWeb/openclaw",
+      "html_url": "https://github.com/anatoliWeb/openclaw",
+      "pushed_at": "2026-04-17T10:56:09Z",
+      "stars": 0,
+      "language": null,
+      "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 "
+    },
+    {
+      "full_name": "varunthelaunch/openclaw",
+      "html_url": "https://github.com/varunthelaunch/openclaw",
+      "pushed_at": "2026-04-17T10:56:09Z",
+      "stars": 0,
+      "language": null,
+      "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 "
+    },
+    {
+      "full_name": "acidnoxz/moltbot",
+      "html_url": "https://github.com/acidnoxz/moltbot",
+      "pushed_at": "2026-04-17T10:56:09Z",
+      "stars": 0,
+      "language": null,
+      "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 "
+    },
+    {
+      "full_name": "qamikazi/openclaw",
+      "html_url": "https://github.com/qamikazi/openclaw",
+      "pushed_at": "2026-04-17T10:56:09Z",
+      "stars": 0,
+      "language": null,
+      "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 "
+    },
+    {
+      "full_name": "poiskgit/openclaw",
+      "html_url": "https://github.com/poiskgit/openclaw",
+      "pushed_at": "2026-04-17T10:51:59Z",
+      "stars": 0,
+      "language": null,
+      "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 "
+    },
+    {
+      "full_name": "Frrrrrrrrank/openclaw",
+      "html_url": "https://github.com/Frrrrrrrrank/openclaw",
+      "pushed_at": "2026-04-17T10:45:07Z",
+      "stars": 0,
+      "language": null,
+      "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 "
+    },
+    {
+      "full_name": "EOLreidc/openclaw",
+      "html_url": "https://github.com/EOLreidc/openclaw",
+      "pushed_at": "2026-04-17T10:27:46Z",
+      "stars": 0,
+      "language": "TypeScript",
+      "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 "
+    }
+  ]
+}
