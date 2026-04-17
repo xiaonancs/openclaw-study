@@ -1,0 +1,55 @@
+# 采集开始 Fri Apr 17 19:20:30 CST 2026
+== 合并 PR (merged:>=2026-02-01) ==
+[remaining=58]
+  page=1 items=100
+[remaining=58]
+  page=2 items=100
+[remaining=58]
+  page=3 items=100
+[remaining=58]
+  page=4 items=100
+[remaining=58]
+  page=5 items=100
+[remaining=58]
+  page=6 items=100
+[remaining=58]
+  page=7 items=100
+[remaining=58]
+  page=8 items=100
+== Issue (created:>=2026-01-01) ==
+[remaining=58]
+  page=1 items=100
+[remaining=58]
+  page=2 items=100
+[remaining=58]
+  page=3 items=0
+== Fork (sort=newest) ==
+[remaining=58]
+  page=1 items=100
+[remaining=57]
+  page=2 items=100
+[remaining=56]
+  page=3 items=100
+[remaining=55]
+[remaining=54]
+# 完成 Fri Apr 17 19:21:31 CST 2026
+# 文件清单:
+-rw-r--r--@ 1 hexiaonan  staff  268768 Apr 17 19:13 /Users/hexiaonan/workspace/publish/openclaw-study/Appendix/B-pr-issue-dataset/20260417/commit-themes-sample.json
+-rw-r--r--@ 1 hexiaonan  staff   10751 Apr 17 19:13 /Users/hexiaonan/workspace/publish/openclaw-study/Appendix/B-pr-issue-dataset/20260417/commit-themes-summary.json
+-rw-r--r--@ 1 hexiaonan  staff  109531 Apr 17 19:21 /Users/hexiaonan/workspace/publish/openclaw-study/Appendix/B-pr-issue-dataset/20260417/contributors.json
+-rw-r--r--@ 1 hexiaonan  staff  596568 Apr 17 19:21 /Users/hexiaonan/workspace/publish/openclaw-study/Appendix/B-pr-issue-dataset/20260417/forks-p1.json
+-rw-r--r--@ 1 hexiaonan  staff  596790 Apr 17 19:21 /Users/hexiaonan/workspace/publish/openclaw-study/Appendix/B-pr-issue-dataset/20260417/forks-p2.json
+-rw-r--r--@ 1 hexiaonan  staff  594710 Apr 17 19:21 /Users/hexiaonan/workspace/publish/openclaw-study/Appendix/B-pr-issue-dataset/20260417/forks-p3.json
+-rw-r--r--@ 1 hexiaonan  staff  607645 Apr 17 19:21 /Users/hexiaonan/workspace/publish/openclaw-study/Appendix/B-pr-issue-dataset/20260417/issues-p1.json
+-rw-r--r--@ 1 hexiaonan  staff  616621 Apr 17 19:21 /Users/hexiaonan/workspace/publish/openclaw-study/Appendix/B-pr-issue-dataset/20260417/issues-p2.json
+-rw-r--r--@ 1 hexiaonan  staff     278 Apr 17 19:21 /Users/hexiaonan/workspace/publish/openclaw-study/Appendix/B-pr-issue-dataset/20260417/issues-p3.json
+-rw-r--r--@ 1 hexiaonan  staff  898381 Apr 17 19:20 /Users/hexiaonan/workspace/publish/openclaw-study/Appendix/B-pr-issue-dataset/20260417/prs-merged-p1.json
+-rw-r--r--@ 1 hexiaonan  staff  889406 Apr 17 19:20 /Users/hexiaonan/workspace/publish/openclaw-study/Appendix/B-pr-issue-dataset/20260417/prs-merged-p2.json
+-rw-r--r--@ 1 hexiaonan  staff  832273 Apr 17 19:20 /Users/hexiaonan/workspace/publish/openclaw-study/Appendix/B-pr-issue-dataset/20260417/prs-merged-p3.json
+-rw-r--r--@ 1 hexiaonan  staff  835153 Apr 17 19:20 /Users/hexiaonan/workspace/publish/openclaw-study/Appendix/B-pr-issue-dataset/20260417/prs-merged-p4.json
+-rw-r--r--@ 1 hexiaonan  staff  923603 Apr 17 19:20 /Users/hexiaonan/workspace/publish/openclaw-study/Appendix/B-pr-issue-dataset/20260417/prs-merged-p5.json
+-rw-r--r--@ 1 hexiaonan  staff  861891 Apr 17 19:20 /Users/hexiaonan/workspace/publish/openclaw-study/Appendix/B-pr-issue-dataset/20260417/prs-merged-p6.json
+-rw-r--r--@ 1 hexiaonan  staff  870184 Apr 17 19:20 /Users/hexiaonan/workspace/publish/openclaw-study/Appendix/B-pr-issue-dataset/20260417/prs-merged-p7.json
+-rw-r--r--@ 1 hexiaonan  staff  838683 Apr 17 19:21 /Users/hexiaonan/workspace/publish/openclaw-study/Appendix/B-pr-issue-dataset/20260417/prs-merged-p8.json
+-rw-r--r--@ 1 hexiaonan  staff  781973 Apr 17 19:21 /Users/hexiaonan/workspace/publish/openclaw-study/Appendix/B-pr-issue-dataset/20260417/releases.json
+-rw-r--r--@ 1 hexiaonan  staff    6934 Apr 17 19:17 /Users/hexiaonan/workspace/publish/openclaw-study/Appendix/B-pr-issue-dataset/20260417/repo-meta.json
