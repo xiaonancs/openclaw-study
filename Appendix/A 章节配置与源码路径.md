@@ -63,7 +63,7 @@
 - **A 章节配置与源码路径**（本文件）
 - **B PR / Issue / Fork / Commit 数据集**：`Appendix/B-pr-issue-dataset/20260417/`
 - **C Fork 活跃度榜**：`Appendix/B-pr-issue-dataset/20260417/fork-activity-rank.md`
-- **D 封面与阅读路径**：`Appendix/D-cover.md`
+- **D 封面与阅读路径**：`Appendix/D 封面与阅读路径.md`
 - **E 源码归档**：不随仓库分发；通过 `git clone https://github.com/openclaw/openclaw @ v2026.4.15` 获取原始代码
 
 ## 写作框架（七维）
@@ -86,4 +86,4 @@
 2. 跑 `scripts/collect-github-data.sh <YYYYMMDD>` 采集（需要 gh auth 可走 5000/hr 鉴权模式）
 3. 跑 `scripts/analyze-data.py <YYYYMMDD>` 生成 analysis-summary.json
 4. 按 Part I-V 顺序阅读并按七维框架写作
-5. 参考 [第 26 章 Roadmap](../Part%20V%20Issues%20and%20Roadmap/26-roadmap-recommendations.md) 比对最新演进
+5. 参考 [第 26 章 Roadmap](../Part%20V%20Issues%20and%20Roadmap/26%20%E9%87%8D%E7%82%B9%E4%BC%98%E5%8C%96%E6%96%B9%E5%90%91%E5%BB%BA%E8%AE%AE.md) 比对最新演进

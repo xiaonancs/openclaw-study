@@ -12,7 +12,7 @@ iOS 和 Android App 不是独立的 chatbot，而是 Gateway 的 **Node**：
 - 对 Gateway 来说：这是一个新注册的"能力提供者"
 - 对 agent 来说：变成一组 tool（`phone.sendSms / phone.takePhoto / phone.openApp` 等）
 
-本质上是 [第十章](../Part%20II%20Source%20Execution/10-tools-canvas-nodes.md) 讲的 Node 协议的移动端实现。
+本质上是 [第十章](../Part%20II%20Source%20Execution/10%20Tools%20Canvas%20%E4%B8%8E%20Nodes.md) 讲的 Node 协议的移动端实现。
 
 ## 二、核心问题和痛点
 

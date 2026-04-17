@@ -89,7 +89,7 @@ flowchart TD
 
 > `"non-main"` is based on `session.mainKey` (default `"main"`), not agent id. Group/channel sessions use their own keys, so they count as non-main and will be sandboxed.
 
-也就是说 `sessionKey == "main"` 是一等公民，其他所有 session 都是二等公民。群聊、来自陌生人的 DM、`openclaw chat --session=test` 生成的临时 session 都被视为 non-main，默认进沙箱。这是 OpenClaw 身份优先安全模型的具体体现（对应 [Part II Ch13](../Part%20II%20Source%20Execution/13-security-sandbox-pairing.md)）。
+也就是说 `sessionKey == "main"` 是一等公民，其他所有 session 都是二等公民。群聊、来自陌生人的 DM、`openclaw chat --session=test` 生成的临时 session 都被视为 non-main，默认进沙箱。这是 OpenClaw 身份优先安全模型的具体体现（对应 [Part II Ch13](../Part%20II%20Source%20Execution/13%20%E5%AE%89%E5%85%A8%20%E6%B2%99%E7%AE%B1%E4%B8%8E%E9%85%8D%E5%AF%B9.md)）。
 
 ### 4.2 skills snapshot 在 loop 开头冻结
 
