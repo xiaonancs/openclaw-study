@@ -80,21 +80,44 @@
 - [第 20 章](../Part%20IV%20Variants%20and%20PR%20Evolution/20-active-forks-survey.md)：4 条主线中"中国化"头部 fork 占 5 个
 - [第 23 章](../Part%20IV%20Variants%20and%20PR%20Evolution/23-what-community-wants.md) 表：中国生态是最大 RoI 缺口
 
-### 修复路径
-1. **官方收录 WeCom / DingTalk / WeChat 三个 channel**（可以从 `luolin-ai/openclawWeComzh` 等社区项目择优吸收）
-2. **"仅使用境内 provider"总开关**：合规模式一键切换
-3. **docs 中文 first-class**：开辟 `docs/zh-CN`（已有但空），与英文文档对齐
-4. **国产模型 adapter 统一 tool_call 兼容层**：自动 detection + fallback
+### 前置澄清（防止方向错）
+
+WeCom / DingTalk / WeChat **并非 "主仓完全空白"**，而是走 Community Plugin 链路（见 [第 5 章 4.5 节](../Part%20I%20Architecture%20and%20Philosophy/05-plugin-extension-system.md) 与 [第 16 章 4.3 节](../Part%20III%20Channels%20Extensions%20Apps/16-china-ecosystem-adaptation.md)）：
+
+- WeCom `@wecom/wecom-openclaw-plugin` 由**腾讯企业微信官方团队**维护
+- DingTalk `@largezhou/ddingtalk` 由社区开发者维护
+- WeChat 曾有 Tencent iLink Bot 官方版，后被 `remove dead WeChat listing`（生态政策问题）
+- QQbot 甚至存在主仓 bundled + Tencent Connect `@tencent-connect/openclaw-qqbot` 两条链路
+
+所以真正的"中国生态官方化"选题，不是"新建 `extensions/wecom`"，而是下面三个**方向选择**。
+
+### 修复路径（按选择开关展开）
+
+1. **Bundle vs Community：主仓化 WeCom/DingTalk 的取舍**
+   - 主仓化好处：首次装机即用、版本跟随主包、docs 统一
+   - 主仓化代价：厂商节奏拖慢主仓、维护负担落回官方团队
+   - **推荐折中**：在 README/onboarding wizard 里把 "install WeCom/DingTalk via community plugin" 作为**一键 opt-in 步骤**，而不是真的 bundle。这样保留热插拔优势，同时解决"新用户不知道可以装"的问题
+2. **QQbot 双实现统一**：主仓 `extensions/qqbot` 与 Tencent Connect 版本列出差异对比表，推荐默认走 Tencent Connect（官方渠道），把 bundled 版降级为 "legacy / fallback"；或者反之明确表态
+3. **WeChat 的表态**：保持"不提供官方入口"立场（合规/反垃圾风险），还是引入受限模式（仅限公众号 / 企业号）？docs 需要显式说明，不能像现在这样悄悄撤了
+4. **"仅使用境内 provider" 总开关**：合规模式一键切换
+5. **docs 中文 first-class**：开辟 `docs/zh-CN`（已有但空），与英文文档对齐，覆盖 Community Plugin 安装路径
+6. **国产模型 adapter 统一 tool_call 兼容层**：自动 detection + fallback
+7. **承认 fork 的整合价值**：`jiulingyun/openclaw-cn` 本质上是"开箱即用 China bundle"，可以考虑提供官方 `openclaw-cn-bundle`（纯发行版，不改核心）来承接这个需求，把 fork 的迁移成本降下来
 
 ### 源码位置
-- 新建 `extensions/wecom`、`extensions/dingtalk`、`extensions/wechat`
+
+- [docs/plugins/community.md](../../openclaw-repo/docs/plugins/community.md) 补充 "China essentials" 分区
+- [src/onboarding](../../openclaw-repo/src/onboarding) 的 wizard 增加 "region preset" 分支
 - [src/security](../../openclaw-repo/src/security) 新增 `complianceMode: cn-only`
 - [docs/zh-CN](../../openclaw-repo/docs/zh-CN) 正式启动
+- 单独发行版仓库（建议 `openclaw-cn-bundle`，不进主仓）
 
 ### 成功指标
-- 6 个月内官方 extension 覆盖中国 Top 3 messenger
+
+- 6 个月内 onboarding wizard 提供 "China preset" 路径，一键装好 WeCom/DingTalk/飞书/QQbot + DeepSeek/Qwen fallback
+- WeCom 官方 plugin 的月度下载量进入前 10（目前 Telegram/Slack/Discord 领先）
 - docs/zh-CN 完整度 ≥ 英文 80%
-- `openclaw-cn` 等 fork 的 star 流速明显下降（说明官方覆盖了需求）
+- `openclaw-cn` 等 fork 的活跃度下降（说明官方 preset 覆盖了需求）
 
 ## R5 Memory / Context 质量
 
@@ -147,7 +170,7 @@
 <div style="background: #ffffff !important; background-color: #ffffff !important; padding: 16px; border-radius: 8px; margin: 16px 0;" bgcolor="#ffffff">
 
 ```mermaid
-%%{init: {'theme':'neutral'}}%%
+%%{init: {'theme': 'neutral', 'themeVariables': {'background': '#ffffff', 'primaryColor': '#f5f5f5', 'primaryTextColor': '#000000', 'primaryBorderColor': '#333333', 'lineColor': '#444444', 'textColor': '#000000', 'mainBkg': '#f5f5f5', 'nodeBorder': '#333333', 'clusterBkg': '#fafafa', 'clusterBorder': '#888888', 'edgeLabelBackground': '#ffffff', 'actorBkg': '#f5f5f5', 'actorBorder': '#333333', 'actorTextColor': '#000000', 'actorLineColor': '#444444', 'signalColor': '#444444', 'signalTextColor': '#000000', 'noteBkgColor': '#f0f0f0', 'noteTextColor': '#000000', 'noteBorderColor': '#888888'}}}%%
 gantt
     title 建议的未来 3-6 月 Roadmap
     dateFormat  YYYY-MM

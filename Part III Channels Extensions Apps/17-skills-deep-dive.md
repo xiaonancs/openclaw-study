@@ -13,7 +13,51 @@
 
 skill 加载时 Gateway 读取 SKILL.md 注入到 agent 的能力池；LLM 自行决定何时调用。
 
-## 二、代表性 skill 拆解
+## 二、Skill 四维分类图
+
+`skills/` 下 53 个本地 skill 按职责大致分四类——执行类做事、集成类对接第三方、协议类定义交互契约、元技能用于生产其他 skill。
+
+<div style="background: #ffffff !important; background-color: #ffffff !important; padding: 16px; border-radius: 8px; margin: 16px 0;" bgcolor="#ffffff">
+
+```mermaid
+%%{init: {'theme': 'neutral', 'themeVariables': {'background': '#ffffff', 'primaryColor': '#f5f5f5', 'primaryTextColor': '#000000', 'primaryBorderColor': '#333333', 'lineColor': '#444444', 'textColor': '#000000', 'mainBkg': '#f5f5f5', 'nodeBorder': '#333333', 'clusterBkg': '#fafafa', 'clusterBorder': '#888888', 'edgeLabelBackground': '#ffffff'}}}%%
+flowchart TB
+    subgraph Exec["执行类 - 直接干活"]
+        CA["coding-agent 编码"]
+        SUM["summarize 总结"]
+        TF["taskflow 任务流"]
+        VF["video-frames 视频抽帧"]
+    end
+    subgraph Integ["集成类 - 接第三方"]
+        NT["notion / obsidian / bear 笔记"]
+        TR["trello / things-mac / apple-reminders 任务"]
+        GH["github / gh-issues / gifgrep 代码托管"]
+        CH["slack / discord 通讯"]
+        MEDIA["spotify-player / openai-whisper 音视频"]
+        SYS["apple-notes / imsg / 1password 系统"]
+    end
+    subgraph Proto["协议类 - 定义契约"]
+        CV["canvas - A2UI JSON"]
+        CHUB["clawhub - 市场客户端"]
+        VC["voice-call - PTT + SIP"]
+        MCP["mcporter - MCP 适配"]
+        SL["session-logs - 日志 grep"]
+    end
+    subgraph Meta["元技能 - 生产其他 skill"]
+        SCR["skill-creator"]
+        HC["healthcheck"]
+        MU["model-usage"]
+    end
+    Agent["Agent loop"] --> Exec
+    Agent --> Integ
+    Agent --> Proto
+    SCR -.produces.-> Exec
+    SCR -.produces.-> Integ
+```
+
+</div>
+
+本章挑 8 个代表性 skill 做深度剖析，每类选 2 个。
 
 ### 2.1 coding-agent（执行类）
 
