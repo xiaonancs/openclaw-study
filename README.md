@@ -6,6 +6,7 @@
 
 ## 快速导航
 
+- **初次进入**：[Appendix D 封面与阅读路径](./Appendix/D-cover.md) 按角色选读 20-40 min
 - **想一次性看懂**：从 [总纲 — OpenClaw 技术主线分析](./总纲-OpenClaw技术主线分析.md) 开始
 - **想了解外界怎么看**：读 [全网调研 — 社区认知地图](./全网调研-社区认知地图.md)
 - **关心架构设计**：Part I
@@ -13,6 +14,7 @@
 - **关心通道与模型**：Part III
 - **关心生态演进**：Part IV（直接回答"社区关注什么"）
 - **关心缺陷与未来**：Part V（直接回答"优化方向"）
+- **只读结论**：[第 27 章 结语 全景与判断](./Part%20V%20Issues%20and%20Roadmap/27-closing-synthesis.md)
 - **需要原始数据**：[Appendix](./Appendix/)
 
 ## 全部章节
@@ -62,11 +64,15 @@
 24. [24 Issues 与抱怨聚类](./Part%20V%20Issues%20and%20Roadmap/24-issues-clustering.md)
 25. [25 源码层设计问题](./Part%20V%20Issues%20and%20Roadmap/25-source-level-design-flaws.md)
 26. [26 重点优化方向建议](./Part%20V%20Issues%20and%20Roadmap/26-roadmap-recommendations.md)
+27. [27 结语 全景与判断](./Part%20V%20Issues%20and%20Roadmap/27-closing-synthesis.md)
 
 ### Appendix 附录与原始数据集
 
 - [Appendix 目录说明](./Appendix/README.md)
+- [Appendix A 章节配置与源码路径](./Appendix/A-chapter-config.md)
+- [Appendix D 封面与阅读路径](./Appendix/D-cover.md)
 - 原始数据集：[Appendix/B-pr-issue-dataset/20260417](./Appendix/B-pr-issue-dataset/20260417/)
+- Fork 榜：[Appendix/B-pr-issue-dataset/20260417/fork-activity-rank.md](./Appendix/B-pr-issue-dataset/20260417/fork-activity-rank.md)
 
 ## 研究方法
 
