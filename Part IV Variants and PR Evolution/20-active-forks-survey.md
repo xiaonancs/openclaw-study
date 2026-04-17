@@ -56,6 +56,28 @@ fork 里最高只有 `jiulingyun/openclaw-cn`（4695 ★）。这说明 **OpenCl
 3. **企业 / 可观测化**
 4. 教程内容型 fork（非代码）
 
+<div style="background: #ffffff !important; background-color: #ffffff !important; padding: 16px; border-radius: 8px; margin: 16px 0;" bgcolor="#ffffff">
+
+```mermaid
+%%{init: {'theme': 'neutral', 'themeVariables': {'background': '#ffffff', 'primaryColor': '#f5f5f5', 'primaryTextColor': '#000000', 'primaryBorderColor': '#333333', 'lineColor': '#444444', 'textColor': '#000000', 'mainBkg': '#f5f5f5', 'nodeBorder': '#333333', 'clusterBkg': '#fafafa', 'clusterBorder': '#888888', 'edgeLabelBackground': '#ffffff'}}}%%
+flowchart LR
+    Total["73.1k fork 总量"] -->|99%过滤| Noise["镜像/教程 fork"]
+    Total -->|1%交集| Active["star gte 3 且近 3 月 push"]
+    Active --> Top20["top 20 star fork"]
+    Top20 -->|25%| CN["中国化 - 5 仓库"]
+    Top20 -->|20%| Edge["端侧化 - 4 仓库"]
+    Top20 -->|15%| Teach["教程 - 3 仓库"]
+    Top20 -->|10%| Ent["企业可观测 - 1 仓库"]
+    Top20 -->|30%| Other["其他工具/本地模型/多 agent 等"]
+    CN -.被社区封装.-> FCN["openclaw-cn 4695 star"]
+    Edge -.被企业封装.-> FEdge["EdgeClaw / OpenClawAndroid"]
+    Ent -.被公司封装.-> FEnt["DenchClaw 1524 star / Control-Center 3818 star"]
+```
+
+</div>
+
+注：数字来自 [fork-activity-rank.md](../Appendix/B-pr-issue-dataset/20260417/fork-activity-rank.md) 手工聚类，百分比是 top 20 内分布。"star gte 3" 是 GitHub search 支持的最低门槛，用来把长尾镜像 fork 过滤掉。
+
 ## 三、每条主线的空缺与价值
 
 ### 3.1 中国化主线（5 个头部 fork）

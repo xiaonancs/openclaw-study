@@ -27,16 +27,23 @@
 <div style="background: #ffffff !important; background-color: #ffffff !important; padding: 16px; border-radius: 8px; margin: 16px 0;" bgcolor="#ffffff">
 
 ```mermaid
-%%{init: {'theme':'neutral'}}%%
+%%{init: {'theme': 'neutral', 'themeVariables': {'background': '#ffffff', 'primaryColor': '#f5f5f5', 'primaryTextColor': '#000000', 'primaryBorderColor': '#333333', 'lineColor': '#444444', 'textColor': '#000000', 'mainBkg': '#f5f5f5', 'nodeBorder': '#333333', 'clusterBkg': '#fafafa', 'clusterBorder': '#888888', 'edgeLabelBackground': '#ffffff', 'actorBkg': '#f5f5f5', 'actorBorder': '#333333', 'actorTextColor': '#000000', 'actorLineColor': '#444444', 'signalColor': '#444444', 'signalTextColor': '#000000', 'noteBkgColor': '#f0f0f0', 'noteTextColor': '#000000', 'noteBorderColor': '#888888'}}}%%
 flowchart TB
-    subgraph Channels[中国通道]
-        Fs[feishu 飞书]
-        QQ[qqbot]
-        WeCom[企业微信/社区 fork]
+    subgraph Bundled["bundled channels (extensions/)"]
+        Fs[feishu]
+        QQ1[qqbot]
         LINE
         Zalo
     end
-    subgraph Models[国产模型]
+    subgraph Community["Community Plugins (openclaw plugins install)"]
+        WeCom["wecom - Tencent WeCom team"]
+        DT["dingtalk - largezhou"]
+        QQ2["qqbot - Tencent Connect"]
+    end
+    subgraph Forks["社区整合 fork"]
+        CN["jiulingyun/openclaw-cn etc"]
+    end
+    subgraph Models[国产模型 bundled]
         DS[DeepSeek]
         Moon[Moonshot / Kimi]
         Qwen
@@ -48,7 +55,10 @@ flowchart TB
         Xiaomi
         Alibaba
     end
-    Channels --> Gateway[Gateway]
+    Bundled --> Gateway[Gateway]
+    Community --> Gateway
+    Forks -.打包分发.-> Bundled
+    Forks -.打包分发.-> Community
     Gateway -->|model-failover| Models
 ```
 
@@ -74,9 +84,25 @@ flowchart TB
 - channel 能力：文本 / 图片 / 表情 / at / 频道 vs 私聊
 - 特别：签名校验频繁更新
 
-### 4.3 企业微信 / 钉钉 / 微信
+### 4.3 企业微信 / 钉钉 / 微信——三条链路共存
 
-官方仓库暂未内置，主要靠社区 fork（如 `luolin-ai/openclawWeComzh`、`BytePioneer-AI/openclaw-china`）。这是中国生态适配里"官方未覆盖"的显著空白，也是 fork 榜活跃的主因。
+这一条是很多源码研究者容易忽视的细节：OpenClaw 主仓 `extensions/` 下确实**没有** `wecom / dingtalk / wechat`，但这不等于"官方空白"，而是走了 [docs/plugins/community.md](../../openclaw-repo/docs/plugins/community.md) 的 **Community Plugin** 机制（见 [第 5 章 4.5 节](../Part%20I%20Architecture%20and%20Philosophy/05-plugin-extension-system.md)）。实际上现在有 **三条并行链路**：
+
+| 平台 | 链路 A：bundled 主仓 | 链路 B：Community Plugin（`openclaw plugins install`） | 链路 C：社区 fork 整包 |
+|---|---|---|---|
+| **企业微信 WeCom** | 无 | `@wecom/wecom-openclaw-plugin`，**腾讯企业微信官方团队**维护（WebSocket 长连接、私聊/群聊/流式/主动消息/Markdown/access control + 文档/会议/消息 skill） | `luolin-ai/openclawWeComzh` 等 |
+| **钉钉 DingTalk** | 无 | `@largezhou/ddingtalk`，社区开发者维护（Stream 模式企业机器人） | 少量 |
+| **微信 WeChat** | 无 | 2025 年曾由 Tencent iLink Bot 插件提供，2026 年初被 `remove dead WeChat listing` 从 docs 中移除（commit `483926a6fb`），当前**无官方入口** | `jiulingyun/openclaw-cn` 等社区 fork 自带非官方接入 |
+| **QQbot** | `extensions/qqbot` | `@tencent-connect/openclaw-qqbot`（**腾讯连接团队**）| — |
+
+几个容易误读的事实：
+
+- **WeCom 已经由腾讯官方 own**：链路 B 里的 WeCom 插件是腾讯企业微信团队自家发的，一条 `openclaw plugins install @wecom/wecom-openclaw-plugin` 即可装上——所以"企业微信支持"**不是**空白，只是不在主仓 `extensions/` 里
+- **QQbot 有双实现**：主仓的 `extensions/qqbot` + 腾讯连接的 `@tencent-connect/openclaw-qqbot` 并行存在，后者是"官方渠道更权威"的版本，文档层面两套签名校验方式略有差异
+- **WeChat 是"官方曾经列过但撤了"**：这是生态政策最敏感的一项（个人号接入风险高），连 Tencent 自己后来都选择不再推
+- **社区 fork 不是"补空白"，是"补整合"**：`jiulingyun/openclaw-cn` 等 fork 并非在重写 WeCom，而是把"WeCom + WeChat + DingTalk + 飞书 + 国产模型 + 国内网络优化"**打包成一个开箱即用版本**，省去用户逐个 install + 配置的麻烦
+
+这一点直接决定了 [第 26 章 R4 中国生态官方化](../Part%20V%20Issues%20and%20Roadmap/26-roadmap-recommendations.md) 的方向——真正该谈的不是 "官方补内置 WeCom/DingTalk"，而是 "把 Community Plugin 层的厂商官方版本 **bundle 成一等公民** vs 继续保持热插拔" 的取舍。
 
 ### 4.4 国产模型 adapter 的两类
 
@@ -126,7 +152,7 @@ OpenClaw 在中文区的独特位置：**开源 + 个人 + 多通道 + 国产模
 
 ## 七、仍存在的问题和缺陷
 
-1. **企业微信 / 钉钉 / 微信** 官方未内置，是能力明显缺口
+1. **企业微信 / 钉钉 / 微信** 主仓未 bundle，而是放在 Community Plugin 层由厂商或第三方维护。好处是主仓压力小、厂商可独立节奏；坏处是安装链路比 bundled 多一步、首次体验不如"开箱自带"，中文新用户容易误判为"不支持"
 2. **模型描述缺本地化**：provider README 多为英文，团队上手慢
 3. **合规配置选项扁平**：没有 "仅使用境内 provider" 的总开关
 4. **文档中文化**：`docs/` 基本英文；中文教程依赖 fork/awesome 仓库

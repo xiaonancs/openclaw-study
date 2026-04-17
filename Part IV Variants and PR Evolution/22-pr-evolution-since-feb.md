@@ -124,6 +124,44 @@
 
 ## 六、按月 × 主题交叉（2026-02 vs 2026-04）
 
+<div style="background: #ffffff !important; background-color: #ffffff !important; padding: 16px; border-radius: 8px; margin: 16px 0;" bgcolor="#ffffff">
+
+```mermaid
+%%{init: {'theme': 'neutral', 'themeVariables': {'background': '#ffffff', 'primaryColor': '#f5f5f5', 'primaryTextColor': '#000000', 'primaryBorderColor': '#333333', 'lineColor': '#444444', 'textColor': '#000000', 'mainBkg': '#f5f5f5', 'nodeBorder': '#333333', 'clusterBkg': '#fafafa', 'clusterBorder': '#888888', 'edgeLabelBackground': '#ffffff'}}}%%
+flowchart LR
+    subgraph Feb["2026-02 561 merged"]
+        F_Ch[channels 89]
+        F_Sec[security 41]
+        F_Mod[models 39]
+        F_Mem[memory 36]
+        F_Ag[agent 43]
+        F_Media[media 11]
+        F_Voice[voice 8]
+    end
+    subgraph Apr["2026-04 872 merged"]
+        A_Ch[channels 158]
+        A_Sec[security 96]
+        A_Mod[models 129]
+        A_Mem[memory 104]
+        A_Ag[agent 76]
+        A_Media[media 37]
+        A_Voice[voice 31]
+    end
+    F_Ch -->|"plus 77 pct"| A_Ch
+    F_Sec -->|"plus 134 pct"| A_Sec
+    F_Mod -->|"plus 231 pct"| A_Mod
+    F_Mem -->|"plus 189 pct"| A_Mem
+    F_Ag -->|"plus 77 pct"| A_Ag
+    F_Media -->|"plus 236 pct"| A_Media
+    F_Voice -->|"plus 288 pct"| A_Voice
+```
+
+</div>
+
+读法：左侧是 2 月规模、右侧是 4 月规模，边上标注增长率。三条增长率最猛的线——voice / media / models——说明 CVE 修完后，4 月已经全面转向"加能力"。
+
+
+
 | 主题 | Feb | Apr | 增长 |
 |---|---|---|---|
 | channels-messaging | 89 | 158 | +77% |

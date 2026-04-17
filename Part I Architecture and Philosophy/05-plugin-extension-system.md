@@ -29,7 +29,7 @@ OpenClaw 的扩展点结构是"**套娃**"：
 <div style="background: #ffffff !important; background-color: #ffffff !important; padding: 16px; border-radius: 8px; margin: 16px 0;" bgcolor="#ffffff">
 
 ```mermaid
-%%{init: {'theme':'neutral'}}%%
+%%{init: {'theme': 'neutral', 'themeVariables': {'background': '#ffffff', 'primaryColor': '#f5f5f5', 'primaryTextColor': '#000000', 'primaryBorderColor': '#333333', 'lineColor': '#444444', 'textColor': '#000000', 'mainBkg': '#f5f5f5', 'nodeBorder': '#333333', 'clusterBkg': '#fafafa', 'clusterBorder': '#888888', 'edgeLabelBackground': '#ffffff', 'actorBkg': '#f5f5f5', 'actorBorder': '#333333', 'actorTextColor': '#000000', 'actorLineColor': '#444444', 'signalColor': '#444444', 'signalTextColor': '#000000', 'noteBkgColor': '#f0f0f0', 'noteTextColor': '#000000', 'noteBorderColor': '#888888'}}}%%
 flowchart TD
     subgraph PluginSDK["packages/plugin-sdk"]
         PluginEntry[plugin-entry.ts]
@@ -107,19 +107,41 @@ provider-onboard.ts        # provider 首次配置向导
 - environment isolation strips API keys from plugin access
 - Prototype pollution detection and freezing of unsafe globals (`JSON`, `Math`, `Reflect`)
 
-### 4.4 extension 分三层
+### 4.4 extension 安装来源分三层
 
-- **bundled**：随 npm 包一起发布，代码放在 `extensions/<id>/`，版本跟随主包。数量最大（106 个）
-- **managed**：由 `openclaw plugins install <id>` 从 ClawHub 安装，落在 `~/.openclaw/extensions/<id>/`
+- **bundled**：随 npm 包一起发布，代码放在 `extensions/<id>/`，版本跟随主包。数量最大（112 个，见 [extensions/](../../openclaw-repo/extensions)）
+- **managed**：由 `openclaw plugins install <spec>` 安装，落在 `~/.openclaw/extensions/<id>/`。`spec` 支持本地目录、`.tgz`、npm 包名、`clawhub:<pkg>`——`openclaw plugins install` 默认 **ClawHub 优先、npm fallback**（见 [docs/tools/plugin.md](../../openclaw-repo/docs/tools/plugin.md)）
 - **user**：在 workspace 或指定路径里符号链接进来，用于本地开发
 
 三层权限递减：bundled 权限最高（信任等同主包）、managed 中等（受 allowlist 管）、user 最低（默认默拒，开发时开 `--unsafe` 才能跑）。
 
-### 4.5 extension 可以直接是 npm 包
+### 4.5 第四条链路：Community Plugin
 
-`package.json` 里只要加 `"openclaw": { "extensions": [...] }` 段就能被发现。典型例子是 `qqbot`、`zalo`、`bluebubbles` 等通道——它们同时在 npm 上发布，用户可以 `npm i openclaw-plugin-qqbot` 然后 `openclaw plugins enable qqbot`。这个契约在 [packages/plugin-package-contract](../../openclaw-repo/packages/plugin-package-contract) 里定义。
+managed 扩展之上还有一条**策划式**的发行渠道——[docs/plugins/community.md](../../openclaw-repo/docs/plugins/community.md) 里列出的 "Community Plugins"。它和普通 managed 的差别是：
 
-### 4.6 configSchema 是扩展的公开接口
+| 维度 | Managed（ClawHub/npm 任意包） | Community Plugin（docs 收录） |
+|---|---|---|
+| 发现性 | 靠搜索 / 推荐 | docs 里显式列表 |
+| 质量门槛 | ClawHub 基本扫描 | "Quality bar"：公共仓库 + 文档 + 活跃维护 |
+| 维护者 | 任何人 | **有明确归属**（有些是厂商官方团队） |
+| 安装命令 | `openclaw plugins install <any>` | 完全一样，但 docs 给了推荐 |
+| 安全验证 | VirusTotal | VirusTotal + 人工列表审核 |
+
+当前 Community Plugins 列表里的关键条目（截至 2026-04-17）：
+
+- **WeCom** (`@wecom/wecom-openclaw-plugin`)：**腾讯企业微信官方团队**维护，WebSocket 长连接，支持私聊/群聊/流式回复/主动消息/image&file/Markdown/访问控制/会议/文档 skill
+- **DingTalk** (`@largezhou/ddingtalk`)：社区开发者维护，Stream 模式企业机器人
+- **WeChat**：2025 年曾由 Tencent iLink Bot 提供，2026 年初被 `remove dead WeChat listing` 从列表中移除（见 commit `483926a6fb`）——当前无官方入口
+- **QQbot** (`@tencent-connect/openclaw-qqbot`)：**腾讯连接团队**维护，与 bundled `extensions/qqbot` **并行存在**两个实现
+- **Codex App Server Bridge**、**Lossless Claw**、**Opik**：第三方生态
+
+这一层的意义是 OpenClaw 的 **"bundled vs community vs 任意"** 三段策略：核心通道 bundle 进主仓（Telegram/Slack/Discord/Feishu 等），重要厂商通道由厂商团队以 community plugin 形式独立维护（WeCom 由腾讯直接 own），小众或实验性的走 managed/user。这种分层让主仓不必承担所有维护压力，又不失对 "官方信任通道" 的可指认性——详见 [第 16 章 中国区生态适配](../Part%20III%20Channels%20Extensions%20Apps/16-china-ecosystem-adaptation.md)。
+
+### 4.6 extension 可以直接是 npm 包
+
+`package.json` 里只要加 `"openclaw": { "extensions": [...] }` 段就能被发现。典型例子是 `qqbot`、`zalo`、`bluebubbles` 等通道——它们同时在 npm 上发布，用户可以 `openclaw plugins install @tencent-connect/openclaw-qqbot`。这个契约在 [packages/plugin-package-contract](../../openclaw-repo/packages/plugin-package-contract) 里定义。
+
+### 4.7 configSchema 是扩展的公开接口
 
 每个扩展的 `openclaw.plugin.json` 应该附带 `configSchema`（JSON Schema）。Gateway 启动时校验用户配置；`openclaw doctor` 用它检测 config drift。用户改错字段（[Issue #6028](https://github.com/openclaw/openclaw/issues/6028)）时就是因为 schema 检查拒绝 unknown key。
 
