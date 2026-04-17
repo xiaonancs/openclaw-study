@@ -2,11 +2,12 @@
 
 ## 目录
 
-- [A 章节配置与源码路径](./A-chapter-config.md) — 研究骨架与可复现说明
+- [A 章节配置与源码路径](./A%20%E7%AB%A0%E8%8A%82%E9%85%8D%E7%BD%AE%E4%B8%8E%E6%BA%90%E7%A0%81%E8%B7%AF%E5%BE%84.md) — 研究骨架与可复现说明
 - [B-pr-issue-dataset/20260417/](./B-pr-issue-dataset/20260417/) — 原始数据集（采集时间 2026-04-17）
 - [C Fork 活跃度榜（含衍生生态）](./B-pr-issue-dataset/20260417/fork-activity-rank.md)
-- [D 封面与阅读路径](./D-cover.md)
+- [D 封面与阅读路径](./D%20%E5%B0%81%E9%9D%A2%E4%B8%8E%E9%98%85%E8%AF%BB%E8%B7%AF%E5%BE%84.md)
 - **E 源码归档**：不随仓库分发，执行 `git clone https://github.com/openclaw/openclaw && git checkout v2026.4.15` 获取（也可用 commit `c56b56e`）
+- `cover-banner.png` — 封面 banner 图片（README 顶部 / Appendix D 引用）
 
 ## B. PR / Issue / Fork / Commit 数据集
 

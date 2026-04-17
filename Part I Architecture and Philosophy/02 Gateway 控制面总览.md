@@ -78,7 +78,7 @@ flowchart TB
 
 ### 4.1 handshake 有 pre-connect challenge
 
-[docs/gateway/protocol.md:24-32](../../openclaw-repo/docs/gateway/protocol.md) 明确：Gateway 在 `connect` 之前先发一个 `connect.challenge` 事件，带 nonce + ts。客户端的 `connect` 请求必须引用这个 nonce。这是 CVE-2026-25253 修复的一部分（见 [Part II Ch13](../Part%20II%20Source%20Execution/13-security-sandbox-pairing.md)），防止跨站 WebSocket 劫持。早期版本没有这个 challenge，是漏洞利用链的核心环节。
+[docs/gateway/protocol.md:24-32](../../openclaw-repo/docs/gateway/protocol.md) 明确：Gateway 在 `connect` 之前先发一个 `connect.challenge` 事件，带 nonce + ts。客户端的 `connect` 请求必须引用这个 nonce。这是 CVE-2026-25253 修复的一部分（见 [Part II Ch13](../Part%20II%20Source%20Execution/13%20%E5%AE%89%E5%85%A8%20%E6%B2%99%E7%AE%B1%E4%B8%8E%E9%85%8D%E5%AF%B9.md)），防止跨站 WebSocket 劫持。早期版本没有这个 challenge，是漏洞利用链的核心环节。
 
 ### 4.2 protocol version 强制范围
 

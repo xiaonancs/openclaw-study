@@ -123,7 +123,7 @@ frontmatter 可以扩展字段（例如 `trigger-words`、`requires-tools`）。
 
 ### 4.3 Skill snapshot 在 loop 开头冻结
 
-这一点在 [Ch03](./03-agent-and-session-model.md) 4.2 已提过：每次 agent loop 开始前，skill 目录被冻结成 snapshot 传给 pi-agent-core。中途用户 `openclaw skills update` 不影响本次 loop。
+这一点在 [Ch03](./03%20Agent%20%E4%B8%8E%20Session%20%E6%A8%A1%E5%9E%8B.md) 4.2 已提过：每次 agent loop 开始前，skill 目录被冻结成 snapshot 传给 pi-agent-core。中途用户 `openclaw skills update` 不影响本次 loop。
 
 ### 4.4 ClawHub 的安全链
 
@@ -173,7 +173,7 @@ ClawHub 是 agent skill 市场里**最接近 npm 成熟度**的——既有 regi
 
 ## 七、仍存在的问题和缺陷
 
-1. **skill 描述膨胀**：随着 ClawHub 规模扩大，每个 loop 往 prompt 里塞描述 token 成本不断上升；需要 "skill recommendation" 之类的二级路由（本研究 [Ch26](../Part%20V%20Issues%20and%20Roadmap/26-roadmap-recommendations.md) 中作为重点方向提出）
+1. **skill 描述膨胀**：随着 ClawHub 规模扩大，每个 loop 往 prompt 里塞描述 token 成本不断上升；需要 "skill recommendation" 之类的二级路由（本研究 [Ch26](../Part%20V%20Issues%20and%20Roadmap/26%20%E9%87%8D%E7%82%B9%E4%BC%98%E5%8C%96%E6%96%B9%E5%90%91%E5%BB%BA%E8%AE%AE.md) 中作为重点方向提出）
 2. **ClawHavoc 根因未彻底解决**：即便过了 VirusTotal，作者可以后续推更新；没有 pin 到 commit 的机制
 3. **多语言支持**：SKILL.md 没有 i18n 结构，description 写成双语 prompt 工程复杂度会变大
 4. **skill 间互斥 / 互补关系没有声明**：两个相互冲突的 skill 同装会打架，目前靠用户自觉
