@@ -57,9 +57,13 @@
 ### Part IV Variants and PR Evolution — 变种生态与演进（用户问 2）
 
 20. [20 活跃 Fork 与变种生态](./Part%20IV%20Variants%20and%20PR%20Evolution/20%20%E6%B4%BB%E8%B7%83%20Fork%20%E4%B8%8E%E5%8F%98%E7%A7%8D%E7%94%9F%E6%80%81.md)
+    - [20A 深度研究 Fork 三题](./Part%20IV%20Variants%20and%20PR%20Evolution/20A%20%E6%B7%B1%E5%BA%A6%E7%A0%94%E7%A9%B6%20Fork%20%E4%B8%89%E9%A2%98.md)（fork metric FDR / openclaw-cn 全解剖 / 回流四因）
 21. [21 同类 AI 助手横向对比](./Part%20IV%20Variants%20and%20PR%20Evolution/21%20%E5%90%8C%E7%B1%BB%20AI%20%E5%8A%A9%E6%89%8B%E6%A8%AA%E5%90%91%E5%AF%B9%E6%AF%94.md)
+    - [21A 深度研究 Peer 三题](./Part%20IV%20Variants%20and%20PR%20Evolution/21A%20%E6%B7%B1%E5%BA%A6%E7%A0%94%E7%A9%B6%20Peer%20%E4%B8%89%E9%A2%98.md)（Gateway 分水岭 / 5 商业模式 / 迁移工程）
 22. [22 二月至今 PR 演进全景](./Part%20IV%20Variants%20and%20PR%20Evolution/22%20%E4%BA%8C%E6%9C%88%E8%87%B3%E4%BB%8A%20PR%20%E6%BC%94%E8%BF%9B%E5%85%A8%E6%99%AF.md)
+    - [22A 深度研究 PR 三题](./Part%20IV%20Variants%20and%20PR%20Evolution/22A%20%E6%B7%B1%E5%BA%A6%E7%A0%94%E7%A9%B6%20PR%20%E4%B8%89%E9%A2%98.md)（TTM 双峰 / CVE 全追踪 / 贡献者同心圆）
 23. [23 社区关注的能力增强](./Part%20IV%20Variants%20and%20PR%20Evolution/23%20%E7%A4%BE%E5%8C%BA%E5%85%B3%E6%B3%A8%E7%9A%84%E8%83%BD%E5%8A%9B%E5%A2%9E%E5%BC%BA.md)
+    - [23A 深度研究 需求与路线图三题](./Part%20IV%20Variants%20and%20PR%20Evolution/23A%20%E6%B7%B1%E5%BA%A6%E7%A0%94%E7%A9%B6%20%E9%9C%80%E6%B1%82%E4%B8%8E%E8%B7%AF%E7%BA%BF%E5%9B%BE%E4%B8%89%E9%A2%98.md)（WeCom ROI / Persona workflow / RICE 敏感度）
 
 ### Part V Issues and Roadmap — 缺陷分析与优化建议（用户问 3）
 
