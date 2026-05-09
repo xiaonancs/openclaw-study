@@ -42,7 +42,7 @@ flowchart TD
         SoulMD[SOUL.md]
         AgentsMD[AGENTS.md]
         ToolsMD[TOOLS.md]
-        SkillsDecl[skills[]]
+        SkillsDecl["skills[]"]
         DefaultModel[default model]
     end
 
