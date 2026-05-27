@@ -6,6 +6,14 @@
 >
 > 采集基线日期：**2026-04-17**；数据覆盖：2026-02-01 以来约 23,014 条 commit、1,200 条 merged PR、420 条 issue、300 个最新 fork + 240 个 star≥3 的 fork + 20 个衍生仓库。
 
+## 系列研究
+
+本研究是 AI Agent / Coding Harness 源码深度研究系列的一部分，姊妹篇：
+
+- [Claude Code 源码解析](https://github.com/xiaonancs/claude-code-source-analysis) — Anthropic Claude Code v2.1.88 完整 Agent Harness 拆解（30 篇 / 23 个子系统 / 179 张架构图）
+- [OpenAI Codex 源码深度研究](https://github.com/xiaonancs/codex-source-analysis) — OpenAI Codex CLI + Rust workspace + TS/Python SDK 全栈（27 篇 / ~51 万字 / 149 张 Mermaid 图）
+- [Hermes Agent 深度研究](https://github.com/xiaonancs/hermes-agent-study) — Hermes Agent + 4 个同源/对比项目（OpenClaw / EvoMap / OpenHarness / JiuwenClaw），含抄袭分析（38 篇 / 32 章 / 97 张架构图）
+
 ## 快速导航
 
 - **初次进入**：[Appendix D 封面与阅读路径](./Appendix/D%20%E5%B0%81%E9%9D%A2%E4%B8%8E%E9%98%85%E8%AF%BB%E8%B7%AF%E5%BE%84.md) 按角色选读 20-40 min
